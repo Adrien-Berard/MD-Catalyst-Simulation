@@ -1,7 +1,32 @@
 import random
 import matplotlib.pyplot as plt
 import numpy as np
-from math import inf as infinity.  # CAREFUL! WHAT IS THIS USED FOR?
+
+## ---CREATION OF CLASS TO AVOID SOME PROBLEMS -- NOT USED YET ##
+class particles:
+    def __init__(self,type,x,vel_x,f_x): #properties of the particle
+        self.type = type
+        self.position = x
+        self.vel = vel_x
+        self.force = f_x
+
+    def change_x(self,x):
+        self.position = x  #Updating the position
+        self.position += - box_width * round(self.position / box_width)  #Periodic boundary conditions
+
+    def change_velocity(self,vel_x):
+        self.vel = vel_x
+
+    def change_force(self,f):
+        self.force = f
+
+    def change_type(self,t):
+        self.type = t
+        
+
+
+
+
 
 # 1. VARIABLE DEFINITION
 N = "test"
